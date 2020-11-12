@@ -12,37 +12,8 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="{{ url_for('static', filename='style.css') }}"
+      href="{{ url_for('static', filename='css/style.css') }}"
     />
-    <style>
-      .section {
-        background: url("./bg.png") no-repeat center;
-        background-size: cover;
-        min-height: 100vh;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-      }
-      .option {
-        display: flex;
-        justify-content: space-between;
-        width: 30%;
-        margin:2% auto;
-      }
-
-      .option > button{
-        width: 25%;
-        font-size:20px;
-      }
-
-      .option > label {
-        color: white;
-        font-size:25px;
-      }
-    </style>
     <title>App Data</title>
   </head>
 
@@ -52,25 +23,28 @@
     </nav>
 
     <div class="section">
-      <form action="/form" method="post" class="option">
-        <label>Ver DataFrame Original</label>
-        <button type="submit" class="btn btn-success">Ir</button>
-      </form>
+      <div class="container">
+        <form action="/form" method="post" class="option">
+          <label>1) Ver DataFrame</label>
+          <button type="submit" class="btn btn-success">Ir</button>
+        </form>
+  
+        <form action="/test" method="post" class="option">
+          <label>2) Parte del DataFrame</label>
+          <button type="submit" class="btn btn-success">Ir</button>
+        </form>
+  
+        <form action="/form" method="post" class="option">
+          <label>3) Ver DataFrame Original</label>
+          <button type="submit" class="btn btn-success">Ir</button>
+        </form>
+  
+        <form action="/form" method="post" class="option">
+          <label>4) Ver DataFrame Original</label>
+          <button type="submit" class="btn btn-success">Ir</button>
+        </form>
 
-      <form action="/form" method="post" class="option">
-        <label>Ver DataFrame Original</label>
-        <button type="submit" class="btn btn-success">Ir</button>
-      </form>
-
-      <form action="/form" method="post" class="option">
-        <label>Ver DataFrame Original</label>
-        <button type="submit" class="btn btn-success">Ir</button>
-      </form>
-
-      <form action="/form" method="post" class="option">
-        <label>Ver DataFrame Original</label>
-        <button type="submit" class="btn btn-success">Ir</button>
-      </form>
+      </div>
     </div>
   </body>
 </html>

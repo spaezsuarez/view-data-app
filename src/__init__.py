@@ -13,6 +13,10 @@ def init_app():
     def load_form():
         return redirect('/data')
 
+    @app.route('/test',methods=['POST'])
+    def load():
+        return redirect('/data/head')
+
 
     @app.route('/')
     def main():
