@@ -1,3 +1,4 @@
 env/
 src/__pycache__
 src/routes/__pycache__
+src/controllers/__pycache__
