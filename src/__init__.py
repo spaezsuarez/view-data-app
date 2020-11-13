@@ -1,5 +1,5 @@
 from flask import Flask,render_template,redirect
-from .routes import dataRoute
+from .routes import dataRoute,formRoute
 
 
 def init_app():
@@ -8,10 +8,15 @@ def init_app():
 
     #Configurar Rutas
     app.register_blueprint(dataRoute)
+    app.register_blueprint(formRoute)
 
-    @app.route('/form',methods=['POST'])
-    def load_form():
-        return redirect('/data')
+    @app.route('/first-form',methods=['POST'])
+    def load_first_form():
+        return redirect('/form/1')
+
+    @app.route('/second-form',methods=['POST'])
+    def load_second_form():
+        return redirect('/form/2')
 
     @app.route('/test',methods=['POST'])
     def load():
