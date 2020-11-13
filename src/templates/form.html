@@ -24,7 +24,13 @@
 
     <div class="container">
       {% if state == 1 %}
-      <p>Esto es el estado uno</p>
+      <form action="/data/head" method="post">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Numero de registros</label>
+          <input type="number" class="form-control" name="number" placeholder="Ingrese numero">
+        </div>
+        <button type="submit" class="btn btn-success">Cargar datos</button>
+      </form>
       {% elif state == 2 %}
       <p>Esto es el estado dos</p>
       {% endif %}

@@ -4,9 +4,7 @@
 - Estefany Murillo Torres 20191020123
 
 """
-
 from src import init_app
-from flask import render_template
 
 app = init_app()
 

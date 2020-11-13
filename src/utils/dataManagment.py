@@ -9,5 +9,6 @@ df = pd.DataFrame.from_records(results)
 def init_data_frame():
     return df
 
-def data_frame_head():
-    return df.head()
+def data_frame_head(number):
+    num = int(number)
+    return df.head(num)
