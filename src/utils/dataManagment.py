@@ -3,7 +3,6 @@ from sodapy import Socrata
 import dateutil
 from datetime import datetime
 
-
 client = Socrata("www.datos.gov.co", None)
 results = client.get("gt2j-8ykr", limit=1000)
 
@@ -25,3 +24,7 @@ def get_country_dates(country,firstDate,secondDate):
     data = df[(df['pais_viajo_1_nom'] == country) & (df['fecha_de_notificaci_n'] >= firstDate) & (df['fecha_de_notificaci_n'] <= secondDate) 
     & (df['recuperado'] == 'Fallecido')]
     return data
+
+def get_contagios_por_pais(sexo):
+    data = df['pais_viajo_1_nom'][df['sexo'] ==sexo].value_counts()
+    return data.to_frame()

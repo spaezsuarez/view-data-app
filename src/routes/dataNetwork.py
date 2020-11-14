@@ -24,3 +24,9 @@ def create_third_request():
     pais = request.form.get('selection-country')
     df = dataManagment.get_country_dates(pais,firstDate,secondDate)
     return render_template('data.html',tables=[df.to_html(classes='data')], titles=df.columns.values)
+
+@dataRoute.route('/count/country',methods=['POST'])
+def create_fourth_request():
+    sexo = request.form.get('selection-sex')
+    df = dataManagment.get_contagios_por_pais(sexo)
+    return render_template('data.html',tables=[df.to_html(classes='data')], titles=df.columns.values) 

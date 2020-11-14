@@ -22,6 +22,10 @@ def init_app():
     def load_third_form():
         return redirect('/form/3')
 
+    @app.route('/fourth-form',methods=['GET'])
+    def load_fourth_form():
+        return redirect('/form/4')
+
     @app.route('/')
     def main():
         return render_template('index.html')

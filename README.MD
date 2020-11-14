@@ -8,10 +8,13 @@ Esta es una aplicacion web para realizar consultas prediseñadas con parámetros
 - Miguel Ángel Rico García 20191020107
 - Estefany Murillo Torres 20191020123
 
-## Uso
+## Instalacion dependencias
 
 Para ejecutar la aplicacion debe instalar con el gestor de paquetes pip las dependencias especificadas en el archivo `requirements.txt`
 
 ```
 python -m pip install -r requirements.txt
 ```
+
+# Ejecucion 
+

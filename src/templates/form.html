@@ -38,9 +38,9 @@
         <form action="/data/sex/country" method="post">
           <div class="form-row align-items-center">
             <div class="col-auto my-1">
-              <label class="mr-sm-2">Personas muertas por sexo y pais al cual viajo.</label>
+              <label class="mr-sm-2">Personas muertas por sexo y país al cual viajo.</label>
               <select class="custom-select mr-sm-2" name="selection-country">
-                <option selected>Pais</option>
+                <option selected>País</option>
                 <option value="ESPAÑA">España</option>
                 <option value="ITALIA">Italia</option>
                 <option value="ALEMANIA">Alemania</option>
@@ -69,7 +69,7 @@
         <form action="/data/country/dates" method="post">
           <div class="form-row align-items-center">
             <div class="col-auto my-1">
-              <label class="mr-sm-2">Numero muertes por pais en un lapso de tiempo determinado.</label>
+              <label class="mr-sm-2">Numero muertes por país en un lapso de tiempo determinado.</label>
               <select class="custom-select mr-sm-2" name="selection-country">
                 <option selected>Pais</option>
                 <option value="ESPAÑA">España</option>
@@ -94,7 +94,23 @@
   
         </form>
       </div>
-      
+      {% elif state == 4 %}
+      <div class="container">
+        <form action="/data/count/country" method="post">
+          <div class="form-row align-items-center">
+            <div class="col-auto my-1">
+              <label class="mr-sm-2">Personas contagiadas por país.</label>
+              <select class="custom-select mr-sm-2" name="selection-sex">
+                <option selected>Sexo</option>
+                <option value="M">M</option>
+                <option value="F">F</option>
+              </select>
+              
+              <button id="btn_uno" type="submit" class="btn btn-success">Cargar datos</button>
+            </div>
+  
+        </form>
+      </div>
       {% endif %}
 
     

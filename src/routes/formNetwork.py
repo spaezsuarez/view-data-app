@@ -12,3 +12,7 @@ def get_second_form():
 @formRoute.route('/3')
 def get_third_form():
     return render_template('form.html',state=3)
+
+@formRoute.route('/4')
+def get_fourth_form():
+    return render_template('form.html',state=4)
