@@ -10,18 +10,17 @@ def init_app():
     app.register_blueprint(dataRoute)
     app.register_blueprint(formRoute)
 
-    @app.route('/first-form',methods=['POST'])
+    @app.route('/first-form',methods=['GET'])
     def load_first_form():
         return redirect('/form/1')
 
-    @app.route('/second-form',methods=['POST'])
+    @app.route('/second-form',methods=['GET'])
     def load_second_form():
         return redirect('/form/2')
 
-    @app.route('/test',methods=['POST'])
-    def load():
-        return redirect('/data/head')
-
+    @app.route('/third-form',methods=['GET'])
+    def load_third_form():
+        return redirect('/form/3')
 
     @app.route('/')
     def main():

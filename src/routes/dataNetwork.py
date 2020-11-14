@@ -1,12 +1,8 @@
 from . import dataRoute
 from flask import render_template,request
 from src.utils import dataManagment
-import pprint as p
-
-@dataRoute.route('/',methods=['GET'])
-def getData():
-    df = dataManagment.init_data_frame()
-    return render_template('data.html',  tables=[df.to_html(classes='data')], titles=df.columns.values)
+import dateutil
+from datetime import datetime
 
 @dataRoute.route('/head',methods=['POST'])
 def create_head():
@@ -19,4 +15,12 @@ def create_second_request():
     sexo = request.form.get('selection-sex')
     pais = request.form.get('selection-country')
     df = dataManagment.get_sex_country_deaths(pais,sexo)
+    return render_template('data.html',tables=[df.to_html(classes='data')], titles=df.columns.values)
+
+@dataRoute.route('/country/dates',methods=['POST'])
+def create_third_request():
+    firstDate =  dateutil.parser.parse(request.form.get('firstDate'),dayfirst=True)
+    secondDate =  dateutil.parser.parse(request.form.get('secondDate'),dayfirst=True)
+    pais = request.form.get('selection-country')
+    df = dataManagment.get_country_dates(pais,firstDate,secondDate)
     return render_template('data.html',tables=[df.to_html(classes='data')], titles=df.columns.values)

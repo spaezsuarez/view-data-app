@@ -12,13 +12,16 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/data.css') }}" />
   </head>
   <body>
+
     <nav class="navbar navbar-dark bg-dark">
-      <a href="/" class="navbar-brand">DataFrame</a>
+      <a href="/" class="navbar-brand">Home</a>
     </nav>
 
-    {% for table in tables %}
-    {{ table|safe }}
-    {% endfor %}
+    <section>
+      {% for table in tables %}
+      {{ table|safe }}
+      {% endfor %}
+    </section>
 
   </body>
 </html>
