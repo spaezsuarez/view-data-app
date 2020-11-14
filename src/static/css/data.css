@@ -1,0 +1,32 @@
+nav {
+  width: 100%;
+  overflow: auto;
+  position: absolute;
+}
+
+body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+table.dataframe,
+.dataframe th,
+.dataframe td {
+  border: none;
+  border-bottom: 1px solid #c8c8c8;
+  border-collapse: collapse;
+  text-align: left;
+  padding: 10px;
+  margin-bottom: 40px;
+  font-size: 0.9em;
+}
+
+tr:nth-child(odd) {
+  background-color: #eee;
+}
+tr:nth-child(even) {
+  background-color: #fff;
+}
+
+tr:hover {
+  background-color: #ffff99;
+}

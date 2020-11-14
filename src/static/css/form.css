@@ -16,4 +16,9 @@ body{
     margin:10% 37% 50%;
     position: absolute;
     overflow: auto;
-  }
+}
+
+#btn_uno{
+  margin-top: 5%;
+  margin-left: 30%;
+}

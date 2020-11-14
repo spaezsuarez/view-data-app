@@ -12,3 +12,7 @@ def init_data_frame():
 def data_frame_head(number):
     num = int(number)
     return df.head(num)
+
+def get_sex_country_deaths(country,sex):
+    data = df[(df['sexo'] == sex) & (df['pais_viajo_1_nom'] == country)]
+    return data

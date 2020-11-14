@@ -26,13 +26,32 @@
       {% if state == 1 %}
       <form action="/data/head" method="post">
         <div class="form-group">
-          <label for="exampleInputEmail1">Numero de registros</label>
+          <label>Numero de registros</label>
           <input type="number" class="form-control" name="number" placeholder="Ingrese numero">
         </div>
         <button type="submit" class="btn btn-success">Cargar datos</button>
       </form>
       {% elif state == 2 %}
-      <p>Esto es el estado dos</p>
+      <form action="/data/sex/country" method="post">
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label class="mr-sm-2">Personas muertas por sexo y pais</label>
+            <select class="custom-select mr-sm-2" name="selection-sex">
+              <option selected>Sexo</option>
+              <option value="M">M</option>
+              <option value="F">F</option>
+            </select>
+            <hr>  
+            <select class="custom-select mr-sm-2" name="selection-country">
+              <option selected>Pais</option>
+              <option value="ESPAÑA">España</option>
+              <option value="ITALIA">Italia</option>
+            </select>
+            <button id="btn_uno" type="submit" class="btn btn-success">Cargar datos</button>
+          </div>
+
+          
+      </form>
       {% endif %}
     </div>
     
