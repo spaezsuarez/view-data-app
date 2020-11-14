@@ -1,15 +1,11 @@
 import pandas as pd
 from sodapy import Socrata
-import dateutil
-from datetime import datetime
-
 
 client = Socrata("www.datos.gov.co", None)
-results = client.get("gt2j-8ykr", limit=1000)
+results = client.get("gt2j-8ykr", limit = 10000)
 
 df = pd.DataFrame.from_records(results)
-df['fecha_de_notificaci_n'] = df['fecha_de_notificaci_n'].apply(dateutil.parser.parse,dayfirst=True)
-print(df)
+df['fecha_inicio_sintomas'] = pd.to_datetime(df['fecha_inicio_sintomas'], format='%d/%m/%Y %H:%M:%S').dt.date
 
 def data_frame_head(number):
     num = int(number)
@@ -20,8 +16,12 @@ def get_sex_country_deaths(country,sex):
     return data
 
 def get_country_dates(country,firstDate,secondDate):
-    print("Pandas: "  + str(firstDate))
-    print("Pandas: "  + str(secondDate))
-    data = df[(df['pais_viajo_1_nom'] == country) & (df['fecha_de_notificaci_n'] >= firstDate) & (df['fecha_de_notificaci_n'] <= secondDate) 
-    & (df['recuperado'] == 'Fallecido')]
+    print("-"*100)
+    print(df['fecha_inicio_sintomas'][7])
+    print("-"*100)
+    print(firstDate)
+    print("-"*100)
+    print(df['fecha_inicio_sintomas'] >= firstDate)
+    
+    data = df[(df['pais_viajo_1_nom'] == country) & (df['fecha_inicio_sintomas'] >= firstDate) & (df['fecha_inicio_sintomas'] <= secondDate)]
     return data
