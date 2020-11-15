@@ -1,14 +1,14 @@
-# view app data
+# App view data
 
 Esta es una aplicacion web para realizar consultas prediseñadas con parámetros definidos por el usuario en un DataFrame de casos positivos de COVID-19.
 
 ## Autores
 
-- Sergio David Paez Suarez 20191020167
-- Miguel Ángel Rico García 20191020107
-- Estefany Murillo Torres 20191020123
+- Sergio David Paez Suarez - 20191020167
+- Miguel Ángel Rico García  - 20191020107
+- Estefany Murillo Torres - 20191020123
 
-## Instalacion dependencias
+## Instalación dependencias
 
 Para ejecutar la aplicacion debe instalar con el gestor de paquetes pip las dependencias especificadas en el archivo `requirements.txt`
 
@@ -22,24 +22,24 @@ Una vez se encuentre parado en la carpeta `src ` del proyecto ejecute el comando
 python App.py
 ```
 
-luego dirijase a `http://localhost:3000/` para ver la aplicacion
+luego dirijase a [http://localhost:3000/](http://localhost:3000/) para ver la aplicacion
 
 ## Vistas
 
-- inicio
+- Inicio
 ![alt text](./doc/Inicio.png)
 
-- formulario 1
+- Formulario 1
 ![alt text](./doc/formulario_uno.png)
 
-- formulario 2
+- Formulario 2
 ![alt text](./doc/formulario_dos.png)
 
-- formulario 3
+- Formulario 3
 ![alt text](./doc/formulario_tres.png)
 
-- formulario 4
+- Formulario 4
 ![alt text](./doc/formulario_cuatro.png)
 
-- formulario 5
+- Formulario 5
 ![alt text](./doc/formulario_cinco.png)
