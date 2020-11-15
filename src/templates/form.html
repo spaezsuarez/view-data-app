@@ -111,6 +111,25 @@
   
         </form>
       </div>
+
+      {% elif state == 5 %}
+      <div class="container">
+        <form action="/data/count/state" method="post">
+          <div class="form-row align-items-center">
+            <div class="col-auto my-1">
+              <label class="mr-sm-2">Personas recuperadas o fallecidas por departamento.</label>
+              <select class="custom-select mr-sm-2" name="selection-state">
+                <option selected>Estado</option>
+                <option value="Recuperado">Recuperado</option>
+                <option value="Fallecido">Fallecido</option>
+                <option value="Activo">Activo</option>
+              </select>
+              
+              <button id="btn_uno" type="submit" class="btn btn-success">Cargar datos</button>
+            </div>
+  
+        </form>
+      </div>
       {% endif %}
 
     

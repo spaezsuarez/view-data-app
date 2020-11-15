@@ -1,7 +1,7 @@
 body{
   overflow: hidden;
   /*background-color:#1769aa;*/
-  background: url('../bg.png') no-repeat center;
+  background: url('../bg.png') repeat-x center;
 }
 
 .container{
@@ -12,7 +12,7 @@ body{
   align-items: center;
   justify-content: center;
   width: 70%;
-  margin:10% 15% 50%;
+  margin:10% 20% 50%;
   position: absolute;
 }
 

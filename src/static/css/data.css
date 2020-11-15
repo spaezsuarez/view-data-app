@@ -1,10 +1,15 @@
 body {
   display: flex;
   flex-direction: column;
+  background: url('../bg2.png') fixed;
+}
+
+.navbar-1{
+  width: 120%;
 }
 
 .navbar {
-  width: 197%;
+  width: 100%;
 }
 
 table,
@@ -30,4 +35,8 @@ tr:nth-child(even) {
 
 tr:hover {
   background-color: #ffff99;
+}
+
+.tablaChiquita{
+  margin-left: 45%;
 }
