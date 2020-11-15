@@ -1,7 +1,7 @@
 body{
-  overflow: hidden;
+  overflow: auto;
   /*background-color:#1769aa;*/
-  background: url('../bg.png') repeat-x center;
+  background: url('../bg.png') fixed center;
 }
 
 .container{
@@ -12,8 +12,9 @@ body{
   align-items: center;
   justify-content: center;
   width: 70%;
-  margin:10% 20% 50%;
+  margin:10% 15% 50%;
   position: absolute;
+  font-family: 'Roboto', sans-serif;
 }
 
 .section {
@@ -40,4 +41,8 @@ body{
 .option > label {
   color: black;
   font-size:25px;
+}
+
+button:hover{
+  opacity: 0.6;
 }

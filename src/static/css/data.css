@@ -1,11 +1,14 @@
 body {
   display: flex;
   flex-direction: column;
-  background: url('../bg2.png') fixed;
+  /*background: url('../bg2.png') fixed;*/
+  /*background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);*/
+  background-color:rgba(41,43,44,0.3); 
 }
 
 .navbar-1{
-  width: 120%;
+  width: 193%;
 }
 
 .navbar {
@@ -38,5 +41,5 @@ tr:hover {
 }
 
 .tablaChiquita{
-  margin-left: 45%;
+  margin-left: 38%;
 }
