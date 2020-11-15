@@ -15,7 +15,7 @@ Para ejecutar la aplicacion debe instalar con el gestor de paquetes pip las depe
 ```
 python -m pip install -r requirements.txt
 ```
-## Ejecucion 
+## Ejecución 
 Una vez se encuentre parado en la carpeta `src ` del proyecto ejecute el comando 
 
 ```
