@@ -1,12 +1,12 @@
 import pandas as pd
+import numpy as np
 from sodapy import Socrata
 
 client = Socrata("www.datos.gov.co", None)
 results = client.get("gt2j-8ykr", limit=10000)
 
 df = pd.DataFrame.from_records(results)
-df['fecha_inicio_sintomas'] = pd.to_datetime(
-    df['fecha_inicio_sintomas'], format='%d/%m/%Y %H:%M:%S').dt.date
+df['fecha_inicio_sintomas'] = pd.to_datetime(df['fecha_inicio_sintomas'], format='%d/%m/%Y %H:%M:%S').dt.date
 
 
 def data_frame_head(number):
@@ -21,7 +21,6 @@ def get_sex_country_deaths(country, sex):
 
 
 def get_country_dates(country, firstDate, secondDate):
-
     data = df[(df['pais_viajo_1_nom'] == country) & (df['fecha_inicio_sintomas']
                                                      >= firstDate) & (df['fecha_inicio_sintomas'] <= secondDate)]
     return data
@@ -36,3 +35,10 @@ def get_estado_por_pais(estado):
     data = df[df['recuperado'] == estado]
     DataGroupBy = data.groupby(['departamento_nom'])['recuperado'].count()
     return DataGroupBy.to_frame()
+    
+
+def get_resumen(departamento):
+    data = df[(df['departamento_nom'] == departamento) & (df['recuperado'] == 'Fallecido')]
+    data = data.loc[:,['edad','per_etn_']]
+    data_group = data.agg(['mean',np.median,'max'])
+    return data_group

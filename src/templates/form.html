@@ -117,12 +117,13 @@
         <form action="/data/count/state" method="post">
           <div class="form-row align-items-center">
             <div class="col-auto my-1">
-              <label class="mr-sm-2">Personas recuperadas o fallecidas por departamento.</label>
+              <label class="mr-sm-2">Estado de personas por departamento.</label>
               <select class="custom-select mr-sm-2" name="selection-state">
                 <option selected>Estado</option>
                 <option value="Recuperado">Recuperado</option>
                 <option value="Fallecido">Fallecido</option>
                 <option value="Activo">Activo</option>
+                <option value="N/A">N/A</option>
               </select>
               
               <button id="btn_uno" type="submit" class="btn btn-success">Cargar datos</button>
@@ -130,6 +131,52 @@
   
         </form>
       </div>
+      {% elif state == 6 %}
+      <div class="container_dos">
+        <form action="/data/test" method="post">
+          <div class="form-row align-items-center">
+            <div class="col-auto my-1">
+              <label class="mr-sm-2">Resumen por departamento.</label>
+              <select class="custom-select mr-sm-2" name="country">
+                <option selected>Departamento</option>
+                <option value="AMAZONAS">AMAZONAS</option>
+                <option value="ANTIOQUIA">ANTIOQUIA</option>
+                <option value="ARAUCA">ARAUCA</option>
+                <option value="ATLANTICO">ATLANTICO</option>
+                <option value="BARANQUILLA">BARANQUILLA</option>
+                <option value="BOGOTA">BOGOTA</option>
+                <option value="BOLIVAR">BOLIVAR</option>
+                <option value="BOYACA">BOYACA</option>
+                <option value="CALDAS">CALDAS</option>
+                <option value="CAQUETA">CAQUETA</option>
+                <option value="CARTAGENA">CARTAGENA</option>
+                <option value="CASANARE">CASANARE</option>
+                <option value="CAUCA">CAUCA</option>
+                <option value="CESAR">CESAR</option>
+                <option value="CHOCO">CHOCO</option>
+                <option value="CORDOBA">CORDOBA</option>
+                <option value="CUNDINAMARCA">CUNDINAMARCA</option>
+                <option value="GUAINIA">GUAINIA</option>
+                <option value="GUAJIRA">GUAJIRA</option>
+                <option value="GUAVIARE">GUAVIARE</option>
+                <option value="HUILA">HUILA</option>
+                <option value="MAGDALENA">MAGDALENA</option>
+                <option value="META">META</option>
+                <option value="NARIÑO">NARIÑO</option>
+                <option value="PUTUMAYO">PUTUMAYO</option>
+                <option value="QUINDIO">QUINDIO</option>
+                <option value="RISARALDA">RISARALDA</option>
+                <option value="SAN ANDRES">SAN ANDRES</option>
+                <option value="SANTANDER">SANTANDER</option>
+                <option value="STA MARTA D.E.">STA MARTA D.E.</option>
+                <option value="SUCRE">SUCRE</option>
+                <option value="TOLIMA">TOLIMA</option>
+                <option value="VAUPES">VAUPES</option>
+                <option value="VICHADA">VICHADA</option>
+
+              </select>
+              <button id="btn_uno" type="submit" class="btn btn-success">Cargar datos</button>
+            </div>
       {% endif %}
 
     

@@ -31,6 +31,9 @@ def load_fourth_form():
 def load_fifth_form():
     return redirect('/form/5')
 
+@app.route('/sixth-form',methods=['POST'])
+def load_sixth_form():
+    return redirect('/form/6')
 
 @app.route('/')
 def main():

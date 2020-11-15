@@ -1,14 +1,16 @@
 body {
   display: flex;
   flex-direction: column;
-  /*background: url('../bg2.png') fixed;*/
-  /*background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);*/
-  background-color:rgba(41,43,44,0.3); 
+  background: url('../bg2.png') fixed;
+}
+
+nav{
+  padding: 9px;
+  padding-left:20px;
 }
 
 .navbar-1{
-  width: 193%;
+  width: 199%;
 }
 
 .navbar {
@@ -38,6 +40,7 @@ tr:nth-child(even) {
 
 tr:hover {
   background-color: #ffff99;
+  cursor: pointer;
 }
 
 .tablaChiquita{

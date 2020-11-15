@@ -45,3 +45,9 @@ def create_fifth_request():
     estado = request.form.get('selection-state')
     df = dataManagment.get_estado_por_pais(estado)
     return render_template('data.html', tables=[df.to_html()], isCentered = False)
+
+@dataRoute.route('/test', methods=['POST'])
+def create_sixth_request():
+    pais = request.form.get('country')
+    df = dataManagment.get_resumen(pais)
+    return render_template('data.html', tables=[df.to_html()], isCentered = False)
