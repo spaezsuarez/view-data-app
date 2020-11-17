@@ -7,6 +7,9 @@ app = Flask(__name__)
 app.register_blueprint(dataRoute)
 app.register_blueprint(formRoute)
 
+@app.route('/')
+def main():
+    return render_template('index.html')
 
 @app.route('/first-form', methods=['GET'])
 def load_first_form():
@@ -27,17 +30,21 @@ def load_third_form():
 def load_fourth_form():
     return redirect('/form/4')
 
+
 @app.route('/fifth-form', methods=['GET'])
 def load_fifth_form():
     return redirect('/form/5')
 
-@app.route('/sixth-form',methods=['POST'])
+
+@app.route('/sixth-form',methods=['GET'])
 def load_sixth_form():
     return redirect('/form/6')
+    
 
-@app.route('/')
-def main():
-    return render_template('index.html')
+@app.route('/seventh-form',methods=['GET'])
+def load_seventh_form():
+    return redirect('/form/7')
+
 
 if __name__ == "__main__":
     app.run(port = 3000, debug = True)

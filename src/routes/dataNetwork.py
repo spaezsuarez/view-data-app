@@ -46,8 +46,19 @@ def create_fifth_request():
     df = dataManagment.get_estado_por_pais(estado)
     return render_template('data.html', tables=[df.to_html()], isCentered = False)
 
-@dataRoute.route('/test', methods=['POST'])
+@dataRoute.route('/resumen/departamento', methods=['POST'])
 def create_sixth_request():
     pais = request.form.get('country')
     df = dataManagment.get_resumen(pais)
     return render_template('data.html', tables=[df.to_html()], isCentered = False)
+
+@dataRoute.route('/muertes/ciudad',methods=['POST'])
+def create_seventh_request():
+    ciudad = request.form.get('selection-city')
+    df = dataManagment.get_muertes_por_ciudad(ciudad)
+    return render_template('data.html', tables=[df.to_html()], isCentered = False)
+
+@dataRoute.route('/test',methods=['GET'])
+def create_test():
+    df = dataManagment.test()
+    return render_template('data.html',tables=[df.to_html()],isCentered = True)

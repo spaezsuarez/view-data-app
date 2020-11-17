@@ -9,6 +9,9 @@ df = pd.DataFrame.from_records(results)
 df['fecha_inicio_sintomas'] = pd.to_datetime(df['fecha_inicio_sintomas'], format='%d/%m/%Y %H:%M:%S').dt.date
 
 
+def test():
+    return df.groupby('ciudad_municipio_nom').count()
+
 def data_frame_head(number):
     num = int(number)
     return df.head(num)
@@ -42,3 +45,9 @@ def get_resumen(departamento):
     data = data.loc[:,['edad','per_etn_']]
     data_group = data.agg(['mean',np.median,'max'])
     return data_group
+
+def get_muertes_por_ciudad(city):
+    data = df[(df['recuperado'] == 'Fallecido') & (df['ciudad_municipio_nom'] == city)]
+    data_group = data.groupby(['ciudad_municipio_nom'])['id_de_caso'].count()
+    result = data_group.to_frame()
+    return result

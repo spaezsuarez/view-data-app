@@ -24,3 +24,7 @@ def get_fifth_form():
 @formRoute.route('/6')
 def get_sixth_form():
     return render_template('form.html',state=6)
+
+@formRoute.route('/7')
+def get_seventh_form():
+    return render_template('form.html',state=7)
