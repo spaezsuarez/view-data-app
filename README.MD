@@ -43,3 +43,9 @@ luego dirijase a [http://localhost:3000/](http://localhost:3000/) para ver la ap
 
 - Formulario 5
 ![alt text](./doc/formulario_cinco.png)
+
+- Formulario 6
+![alt text](./doc/formulario_seis.png)
+
+- Formulario 7
+![alt text](./doc/formulario_siete.png)
