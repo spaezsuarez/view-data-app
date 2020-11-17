@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background: url('../bg2.png') fixed;
+}
+
+nav{
+  padding: 9px;
+  padding-left:20px;
+}
+
+.navbar-1{
+  width: 199%;
+}
+
+.navbar {
+  width: 100%;
+}
+
+table,
+th,
+td {
+  border: none;
+  border-bottom: 1px solid #c8c8c8;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 40px;
+  font-size: 0.9em;
+}
+
+section {text-align: center;}
+
+tr:nth-child(odd) {
+  background-color: #eee;
+}
+tr:nth-child(even) {
+  background-color: #fff;
+}
+
+tr:hover {
+  background-color: #ffff99;
+  cursor: pointer;
+}
+
+.tablaChiquita{
+  margin-left: 38%;
+}
